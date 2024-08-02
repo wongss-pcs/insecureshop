@@ -25,18 +25,19 @@ jobs:
             matrix:
                 language: ["java-kotlin"]
                 build-mode: [ "manual" ] 
-                queries: [ "security-extended", "security-and-quality" ]
+                queries: [ "security-extended"]
+                #queries: [ "security-extended", "security-and-quality" ]
 
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
 
-            - uses: actions/cache@v2
-              with:
-                path: |
-                    ~/.gradle/caches
-                    ~/.gradle/wrapper
-                key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
+            # - uses: actions/cache@v2
+            #   with:
+            #     path: |
+            #         ~/.gradle/caches
+            #         ~/.gradle/wrapper
+            #     key: ${{ runner.os }}-${{ hashFiles('**/*.gradle*') }}-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}-${{ hashFiles('**/buildSrc/**/*.kt') }}
 
             - name: Set up JDK
               uses: actions/setup-java@v3
