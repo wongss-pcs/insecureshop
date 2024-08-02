@@ -57,7 +57,7 @@ jobs:
             - if: matrix.build-mode == 'manual'
               shell: bash
               run: |
-                /gradlew assemble
+                ./gradlew assemble
                 exit 1
           
             - name: Perform CodeQL Analysis
