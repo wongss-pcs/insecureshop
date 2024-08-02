@@ -28,7 +28,7 @@ jobs:
                 queries: [ "security-extended"]
                 #queries: [ "security-extended", "security-and-quality" ]
 
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
             - uses: actions/checkout@v2
 
