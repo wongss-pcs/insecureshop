@@ -23,7 +23,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                language: ["java-kotlin"]
+                language: ["kotlin"]
                 build-mode: [ "manual" ] 
                 queries: [ "security-extended"]
                 #queries: [ "security-extended", "security-and-quality" ]
