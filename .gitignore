@@ -1,0 +1,12 @@
+build
+app/build
+
+
+.idea
+.DS_Store
+.gradle
+
+
+app/build
+*.apk
+
